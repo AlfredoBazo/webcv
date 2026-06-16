@@ -3,119 +3,936 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Profile - Alfredo</title>
+    <title>Alfredo Bazo — Senior Quality Engineer</title>
+    <meta name="description" content="Senior Quality Engineer specialized in AI-augmented test automation, CI/CD pipeline engineering, and performance testing. 11+ years of experience.">
+    <meta property="og:title" content="Alfredo Bazo — Senior Quality Engineer">
+    <meta property="og:description" content="AI-augmented QE | Test Automation | CI/CD Engineering | Custom AI agent skills powering QA workflows">
+    <meta property="og:url" content="https://alfredobazo.vercel.app">
+    <meta property="og:type" content="website">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%233b82f6'/><text x='50' y='68' font-size='45' font-family='Arial' font-weight='bold' fill='white' text-anchor='middle'>AB</text></svg>" type="image/svg+xml">
     <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f8fafc;
+            color: #0f172a;
+            line-height: 1.6;
+        }
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+        .gradient-hero {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+        }
+        .gradient-accent {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #60a5fa, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            transition: all 0.2s ease;
+        }
+        .card:hover {
+            border-color: #93c5fd;
+            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.1);
+        }
+        .tag {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            background: #eff6ff;
+            color: #1d4ed8;
+            border: 1px solid #bfdbfe;
+        }
+        .tag-infra { background: #f0fdf4; color: #15803d; border-color: #bbf7d0; }
+        .tag-ai { background: #faf5ff; color: #7e22ce; border-color: #e9d5ff; }
+        .tag-lang { background: #fff7ed; color: #c2410c; border-color: #fed7aa; }
+        .tag-ci { background: #fef2f2; color: #b91c1c; border-color: #fecaca; }
+        .tag-monitor { background: #ecfeff; color: #0e7490; border-color: #a5f3fc; }
+        .timeline-dot {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #3b82f6;
+            border: 3px solid #bfdbfe;
+            position: absolute;
+            left: -8px;
+            top: 4px;
+        }
+        .timeline-line {
+            position: absolute;
+            left: 0;
+            top: 24px;
+            bottom: -24px;
+            width: 2px;
+            background: #e2e8f0;
+        }
+        .skill-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 16px;
+            transition: all 0.2s ease;
+        }
+        .skill-card:hover {
+            border-color: #93c5fd;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.08);
+        }
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .nav-link {
+            position: relative;
+            color: #94a3b8;
+            transition: color 0.2s;
+        }
+        .nav-link:hover { color: #f1f5f9; }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #3b82f6;
+            transition: width 0.2s;
+        }
+        .nav-link:hover::after { width: 100%; }
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        @media (max-width: 640px) {
+            .section-title { font-size: 1.5rem; margin-bottom: 2rem; }
+            .metric-value { font-size: 2rem; }
         }
     </style>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3787953063554923"
-     crossorigin="anonymous"></script>
 </head>
-<body class="bg-color3">
+<body>
 
-    <!-- Header with CTA -->
-    <header class="text-center py-10 bg-[#0086e8] text-white">
-        <h1 class="text-4xl font-bold mb-4">Meet Alfredo, Telecommunications Engineer! 👨‍💻</h1>
-        <p class="text-lg mb-6">Experience, career, and passion for technology 🚀</p>
-        <a href="https://www.linkedin.com/in/alfredobazo/?locale=en_US" target="_blank" class="bg-[#ff0f0e] text-white py-2 px-4 rounded-lg shadow-lg hover:bg-[#21abfb] transition duration-300">Visit me on LinkedIn 🔗</a>
-    </header>
-
-    <!-- Language Flags -->
-    <div class="fixed top-4 right-4 flex space-x-4">
-        <a href="index.html" class="text-2xl">🇪🇸</a>
-        <a href="index-en.html" class="text-2xl">🇺🇸</a>
+<!-- Navigation -->
+<nav class="fixed top-0 left-0 right-0 z-50 gradient-hero border-b border-slate-700/50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+            <span class="text-white font-bold text-lg">Alfredo Bazo</span>
+            <div class="hidden sm:flex items-center gap-6 text-sm">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#ai-skills" class="nav-link">AI & Automations</a>
+                <a href="#metrics" class="nav-link">Metrics</a>
+                <a href="#testimonials" class="nav-link">Peers</a>
+                <a href="#certifications" class="nav-link">Certs</a>
+                <a href="index.html" class="text-white/60 hover:text-white transition text-xs border border-slate-600 rounded px-2 py-1">ES</a>
+            </div>
+            <div class="sm:hidden flex items-center gap-2">
+                <a href="index.html" class="text-white/60 hover:text-white transition text-xs border border-slate-600 rounded px-2 py-1">ES</a>
+                <button id="menu-btn" class="text-white p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden sm:hidden pb-4">
+            <div class="flex flex-col gap-2 text-sm">
+                <a href="#about" class="text-slate-300 hover:text-white py-1">About</a>
+                <a href="#experience" class="text-slate-300 hover:text-white py-1">Experience</a>
+                <a href="#skills" class="text-slate-300 hover:text-white py-1">Skills</a>
+                <a href="#ai-skills" class="text-slate-300 hover:text-white py-1">AI & Automations</a>
+                <a href="#metrics" class="text-slate-300 hover:text-white py-1">Metrics</a>
+                <a href="#testimonials" class="text-slate-300 hover:text-white py-1">Peers</a>
+                <a href="#certifications" class="text-slate-300 hover:text-white py-1">Certs</a>
+            </div>
+        </div>
     </div>
+</nav>
 
-    <!-- About Me -->
-    <section class="py-16 px-6">
-        <h2 class="text-3xl font-semibold text-center mb-8">Who am I? 👤</h2>
-        <div class="grid sm:grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="card bg-white p-6 border rounded-lg shadow-lg">
-                <a href="formacion-en.html" class="text-[#0086e8] hover:text-[#21abfb]">
-                    <h3 class="text-xl font-semibold">My academic background 🎓</h3>
-                    <p>Click to learn more</p>
-                </a>
-            </div>
-            <div class="card bg-white p-6 border rounded-lg shadow-lg">
-                <a href="pasion-en.html" class="text-[#0086e8] hover:text-[#21abfb]">
-                    <h3 class="text-xl font-semibold">My passion for technology 💡</h3>
-                    <p>Click to learn more</p>
-                </a>
-            </div>
-            <div class="card bg-white p-6 border rounded-lg shadow-lg">
-                <a href="agiles-en.html" class="text-[#0086e8] hover:text-[#21abfb]">
-                    <h3 class="text-xl font-semibold">Agile methodologies 🏃‍♂️</h3>
-                    <p>Click to learn more</p>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education -->
-    <section class="py-16 px-6 bg-[#f1f1f1]">
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
-            <div class="flex justify-center">
-                <img src="profesor.jpg" alt="Professor" class="w-32 h-32 rounded-full shadow-lg">
-            </div>
+<!-- Hero -->
+<section class="gradient-hero min-h-screen flex items-center pt-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-                <h2 class="text-3xl font-semibold text-center text-[#0086e8]">My education 🎓</h2>
-                <p class="text-lg mt-4">My background in Telecommunications Engineering has been essential to successfully carry out high-impact projects.</p>
+                <div class="inline-flex items-center gap-2 bg-slate-800/50 border border-slate-700 rounded-full px-4 py-1.5 text-sm text-slate-300 mb-6">
+                    <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                    Open to Senior QE opportunities
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4">
+                    Alfredo <span class="gradient-text">Bazo</span>
+                </h1>
+                <p class="text-xl sm:text-2xl font-semibold text-slate-300 mb-1">
+                    Senior Quality Engineer
+                </p>
+                <p class="text-base text-slate-400 mb-3">
+                    Seville, Spain &mdash; Remote
+                </p>
+                <p class="text-lg text-slate-400 max-w-xl mb-4">
+                    AI-augmented QE specializing in test automation architecture, CI/CD pipeline engineering, and performance testing at scale. I've built <strong class="text-white">several custom AI agent skills</strong> that power 50+ automated workflows across the quality lifecycle.
+                </p>
+                <p class="text-sm text-slate-400 max-w-xl mb-8">
+                    Looking for: <strong class="text-slate-300">Senior QE / QA Lead</strong> — SaaS, B2B platforms, or critical infrastructure.
+                </p>
+                <div class="flex flex-wrap gap-3">
+                    <a href="mailto:alfredo.bazo89@gmail.com"
+                       class="gradient-accent text-white font-semibold px-6 py-3 rounded-lg hover:opacity-90 transition shadow-lg shadow-blue-500/25">
+                        Contact me
+                    </a>
+                    <a href="cv-alfredo-bazo.pdf" target="_blank"
+                       class="bg-white/10 text-white font-semibold px-6 py-3 rounded-lg hover:bg-white/20 transition border border-white/20">
+                        Download CV (PDF)
+                    </a>
+                    <a href="https://www.linkedin.com/in/alfredobazo/" target="_blank"
+                       class="border border-slate-600 text-slate-300 font-semibold px-6 py-3 rounded-lg hover:bg-slate-800 transition">
+                        LinkedIn
+                    </a>
+                </div>
+            </div>
+            <div class="lg:block">
+                <div class="flex flex-col items-center mb-8">
+                    <img src="photo.jpg" alt="Alfredo Bazo"
+                         class="w-44 lg:w-52 h-44 lg:h-52 rounded-2xl object-cover shadow-xl border-2 border-slate-700/50">
+                </div>
+                <div class="grid grid-cols-2 gap-3 sm:gap-4">
+                    <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-4 sm:p-6">
+                        <div class="text-2xl sm:text-3xl font-bold gradient-text">11</div>
+                        <div class="text-slate-400 text-xs sm:text-sm mt-1">Years in QA</div>
+                    </div>
+                    <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-4 sm:p-6">
+                        <div class="text-2xl sm:text-3xl font-bold gradient-text">6+</div>
+                        <div class="text-slate-400 text-xs sm:text-sm mt-1">Custom AI Agent Skills</div>
+                    </div>
+                    <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-4 sm:p-6">
+                        <div class="text-2xl sm:text-3xl font-bold gradient-text">70%</div>
+                        <div class="text-slate-400 text-xs sm:text-sm mt-1">Regression Time Cut</div>
+                    </div>
+                    <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-4 sm:p-6">
+                        <div class="text-2xl sm:text-3xl font-bold gradient-text">500+</div>
+                        <div class="text-slate-400 text-xs sm:text-sm mt-1">Pipeline Runs/Month</div>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Professional Career -->
-    <section class="py-16 px-6">
-        <h2 class="text-3xl font-semibold text-center text-[#0086e8] mb-8">Professional career 💼</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="card bg-white p-6 border rounded-lg shadow-lg">
-                <h3 class="text-xl font-semibold text-[#0086e8]">Quality engineer - QA 🔍✅</h3>
-                <a href="qe-en.html" class="text-[#0086e8] hover:text-[#21abfb]">
-                    <p>Click to learn more</p>
-                </a>
+<!-- About -->
+<section id="about" class="py-20 sm:py-28">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="section-title">About me</h2>
+        <div class="card p-8 sm:p-10">
+            <p class="text-lg text-slate-700 mb-6">
+                I'm a <strong>Senior Quality Engineer</strong> at <strong>Appian</strong>, where I own quality assurance for the RPA platform. My work spans the full quality lifecycle: test automation architecture, CI/CD pipeline engineering, performance testing, incident response, and infrastructure automation.
+            </p>
+            <p class="text-lg text-slate-700 mb-6">
+                What sets me apart is my <strong>AI-augmented approach to QE</strong>. I've built <strong>several custom AI agent skills</strong> — reusable, codified workflows that automate everything from ticket verification and pipeline failure analysis to weekly quality reporting. Combined with 40+ tool integrations and productivity automations, this ecosystem makes daily operations <strong>2-5x faster</strong> than manual execution.
+            </p>
+            <p class="text-lg text-slate-700 mb-6">
+                I believe in <strong>data-driven quality</strong>. Every decision, escalation, and report is backed by concrete metrics from Jira, GitLab, and Prometheus. I've authored internal QE best practices and AI excellence standards, mentored team processes, and driven a shift-left quality culture in cross-functional agile teams.
+            </p>
+            <p class="text-lg text-slate-700">
+                As the <strong>sole QE of the RPA team</strong>, I own the full quality lifecycle: bug testing, feature-level validation, manual regression, and maintaining the Selenium/Playwright automation pipeline. I also <strong>lead, manage, and execute all RPA releases</strong> — including hotfixes and out-of-bound releases.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Experience -->
+<section id="experience" class="py-20 sm:py-28 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="section-title">Experience</h2>
+
+        <div class="relative pl-8">
+            <div class="timeline-line"></div>
+
+            <!-- Appian -->
+            <div class="relative mb-12">
+                <div class="timeline-dot"></div>
+                <div class="card p-6 sm:p-8 ml-4">
+                    <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900">Senior Quality Engineer</h3>
+                            <p class="text-blue-600 font-medium">Appian &mdash; RPA Platform</p>
+                        </div>
+                        <span class="text-sm text-slate-500 font-mono">2021 &ndash; Present</span>
+                    </div>
+                    <p class="text-slate-600 mb-4">Quality ownership for the Appian RPA platform: automation, performance, CI/CD, and AI-augmented workflows.</p>
+                    <ul class="space-y-2 text-slate-600">
+                        <li class="flex gap-2">
+                            <span class="text-blue-500 shrink-0 mt-1.5">&#9702;</span>
+                            <span>Designed and maintain the test automation architecture using <strong>Selenium</strong>, <strong>pytest</strong>, <strong>Locust</strong>, and <strong>Robot Framework</strong> across HA Kubernetes environments. Also use <strong>Playwright</strong> for specific HAR capture and regression scenarios</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="text-blue-500 shrink-0 mt-1.5">&#9702;</span>
+                            <span>Built <strong>several AI agent skills</strong> for QE workflows: end-to-end ticket verification, regression testing, pipeline failure analysis, performance benchmarking, and weekly quality reports</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="text-blue-500 shrink-0 mt-1.5">&#9702;</span>
+                            <span>Own CI/CD pipeline failure analysis across parallel test shards, classifying failures and correlating against code changes</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="text-blue-500 shrink-0 mt-1.5">&#9702;</span>
+                            <span>Performance testing with <strong>Locust</strong>, tracking p50/p95/p99 and flagging regressions >10%. HAR capture with <strong>Playwright</strong> for baseline analysis</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="text-blue-500 shrink-0 mt-1.5">&#9702;</span>
+                            <span>Infrastructure automation: deploy WARs to K8s, ephemeral Linux EC2 instances, MariaDB/Redis debugging</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="text-blue-500 shrink-0 mt-1.5">&#9702;</span>
+                            <span>Incident response with 7-day lookback, unified timelines, and Durable Preventive Actions (DPAs)</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="text-blue-500 shrink-0 mt-1.5">&#9702;</span>
+                            <span>Track and report: bug escape rate, regression rate, CVE SLA compliance, pipeline green rate</span>
+                        </li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="tag">Selenium</span>
+                        <span class="tag">pytest</span>
+                        <span class="tag">Locust</span>
+                        <span class="tag">Robot Framework</span>
+                        <span class="tag">Playwright</span>
+                        <span class="tag tag-infra">Kubernetes</span>
+                        <span class="tag tag-infra">AWS</span>
+                        <span class="tag tag-ai">Kiro AI</span>
+                        <span class="tag tag-ai">Gemini Gems</span>
+                        <span class="tag tag-ai">Jira Rovo</span>
+                        <span class="tag tag-ci">GitLab CI</span>
+                        <span class="tag tag-monitor">Prometheus/Grafana</span>
+                        <span class="tag tag-lang">Python</span>
+                        <span class="tag tag-lang">TypeScript</span>
+                    </div>
+                </div>
             </div>
-            <div class="card bg-white p-6 border rounded-lg shadow-lg">
-                <h3 class="text-xl font-semibold text-[#0086e8]">Developer 💻</h3>
-                <a href="desarrollador-en.html" class="text-[#0086e8] hover:text-[#21abfb]">
-                    <p>Click to learn more</p>
-                </a>
+
+            <!-- Crossvale -->
+            <div class="relative mb-12">
+                <div class="timeline-dot"></div>
+                <div class="card p-6 sm:p-8 ml-4">
+                    <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900">Senior QA Automation Engineer</h3>
+                            <p class="text-blue-600 font-medium">Crossvale &mdash; Seville</p>
+                        </div>
+                        <span class="text-sm text-slate-500 font-mono">Jun 2020 &ndash; May 2021</span>
+                    </div>
+                    <ul class="space-y-2 text-slate-600">
+                        <li class="flex gap-2">
+                            <span class="text-blue-500 shrink-0 mt-1.5">&#9702;</span>
+                            <span>Developed web and mobile UI automated test suites for an international banking project (<strong>First Hawaiian Bank</strong>) using <strong>Protractor</strong>, <strong>JavaScript</strong>, <strong>BDD/Cucumber</strong>, and <strong>Appium</strong></span>
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="text-blue-500 shrink-0 mt-1.5">&#9702;</span>
+                            <span>Performed API security audits with <strong>Burp Suite</strong> and <strong>OWASP ZAP</strong>, static code analysis with <strong>SonarQube</strong></span>
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="text-blue-500 shrink-0 mt-1.5">&#9702;</span>
+                            <span>Backend support using <strong>Java 8</strong> and <strong>AWS</strong> (Lambda, API Gateway)</span>
+                        </li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="tag">Protractor</span>
+                        <span class="tag">Appium</span>
+                        <span class="tag">Cucumber</span>
+                        <span class="tag">Burp Suite</span>
+                        <span class="tag">OWASP ZAP</span>
+                        <span class="tag tag-lang">JavaScript</span>
+                        <span class="tag tag-lang">Java</span>
+                        <span class="tag tag-infra">AWS</span>
+                    </div>
+                </div>
             </div>
-            <div class="card bg-white p-6 border rounded-lg shadow-lg">
-                <h3 class="text-xl font-semibold text-[#0086e8]">Teacher 👨‍🏫 </h3>
-                <a href="profesor-en.html" class="text-[#0086e8] hover:text-[#21abfb]">
-                    <p>Click to learn more</p>
-                </a>
+
+            <!-- Ayesa -->
+            <div class="relative mb-12">
+                <div class="timeline-dot"></div>
+                <div class="card p-6 sm:p-8 ml-4">
+                    <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900">QA Engineer</h3>
+                            <p class="text-blue-600 font-medium">Ayesa &mdash; Seville</p>
+                        </div>
+                        <span class="text-sm text-slate-500 font-mono">Jul 2018 &ndash; Jun 2020</span>
+                    </div>
+                    <ul class="space-y-2 text-slate-600">
+                        <li class="flex gap-2">
+                            <span class="text-blue-500 shrink-0 mt-1.5">&#9702;</span>
+                            <span>Automated <strong>REST/SOAP APIs</strong> and functional web testing using <strong>Java</strong>, <strong>Cucumber</strong>, <strong>JavaScript</strong>, and <strong>Docker</strong> in Agile environments</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="text-blue-500 shrink-0 mt-1.5">&#9702;</span>
+                            <span>Integrated test suites into CI/CD pipelines, reducing regression time</span>
+                        </li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="tag">Selenium</span>
+                        <span class="tag">Cucumber</span>
+                        <span class="tag">REST/SOAP</span>
+                        <span class="tag tag-lang">Java</span>
+                        <span class="tag tag-lang">JavaScript</span>
+                        <span class="tag tag-infra">Docker</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Everis & Atos -->
+            <div class="relative mb-12">
+                <div class="timeline-dot"></div>
+                <div class="card p-6 sm:p-8 ml-4">
+                    <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900">SQA Tester</h3>
+                            <p class="text-blue-600 font-medium">Everis &amp; Atos &mdash; Seville</p>
+                        </div>
+                        <span class="text-sm text-slate-500 font-mono">Jun 2016 &ndash; Jul 2018</span>
+                    </div>
+                    <ul class="space-y-2 text-slate-600">
+                        <li class="flex gap-2">
+                            <span class="text-blue-500 shrink-0 mt-1.5">&#9702;</span>
+                            <span>Managed test execution and quality assurance for enterprise clients including the <strong>European Patent Office (EPO)</strong> and <strong>Orange</strong></span>
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="text-blue-500 shrink-0 mt-1.5">&#9702;</span>
+                            <span>Test management with <strong>Jira</strong> and <strong>X-Ray</strong>, database validation with <strong>PL/SQL</strong></span>
+                        </li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="tag">Jira</span>
+                        <span class="tag tag-ci">X-Ray</span>
+                        <span class="tag tag-lang">PL/SQL</span>
+                        <span class="tag">Postman</span>
+                        <span class="tag tag-ci">Jenkins</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- OpenWebinars -->
+            <div class="relative mb-12">
+                <div class="timeline-dot"></div>
+                <div class="card p-6 sm:p-8 ml-4">
+                    <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900">External Contributor / Course Creator</h3>
+                            <p class="text-blue-600 font-medium">OpenWebinars &mdash; Seville</p>
+                        </div>
+                        <span class="text-sm text-slate-500 font-mono">Jan 2021</span>
+                    </div>
+                    <ul class="space-y-2 text-slate-600">
+                        <li class="flex gap-2">
+                            <span class="text-blue-500 shrink-0 mt-1.5">&#9702;</span>
+                            <span>Designed and delivered a specialized online course on <strong>"UI Test Automation in Angular with Protractor"</strong></span>
+                        </li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="tag">Protractor</span>
+                        <span class="tag">Angular</span>
+                        <span class="tag tag-lang">JavaScript</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Developer -->
+            <div class="relative">
+                <div class="timeline-dot"></div>
+                <div class="card p-6 sm:p-8 ml-4">
+                    <div class="flex flex-wrap items-start justify-between gap-2 mb-3">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900">Software Developer</h3>
+                            <p class="text-blue-600 font-medium">Robotics, Vision & Control Group &mdash; Universidad de Sevilla / Airbus</p>
+                        </div>
+                        <span class="text-sm text-slate-500 font-mono">2013 &ndash; 2015</span>
+                    </div>
+                    <ul class="space-y-2 text-slate-600">
+                        <li class="flex gap-2">
+                            <span class="text-blue-500 shrink-0 mt-1.5">&#9702;</span>
+                            <span>Developed the vision system software for a <strong>flexible riveting machine</strong> in an R&D project with <strong>Airbus</strong> and <strong>CATEC</strong></span>
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="text-blue-500 shrink-0 mt-1.5">&#9702;</span>
+                            <span>Used <strong>C, C++, ROS, OpenCV, PCL, Qt</strong> for image processing, hardware control, and UI development</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="text-blue-500 shrink-0 mt-1.5">&#9702;</span>
+                            <span>Final thesis earned <strong>Honors Degree</strong> (Matricula de Honor)</span>
+                        </li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="tag tag-lang">C</span>
+                        <span class="tag tag-lang">C++</span>
+                        <span class="tag">OpenCV</span>
+                        <span class="tag">ROS</span>
+                        <span class="tag">Qt</span>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
 
-    <!-- Frequently Asked Questions -->
-    <section class="py-16 px-6 bg-[#f1f1f1]">
-        <h2 class="text-3xl font-semibold text-center text-[#0086e8] mb-8">Frequently asked questions ❓</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-            <div class="card bg-white p-6 border rounded-lg shadow-lg">
-                <h3 class="text-xl font-semibold text-[#0086e8]">How long have I been in the industry? ⏳</h3>
-                <p>I have been in the industry for 10 years, starting in 2013 as a developer until 2015. Since then, I have specialized in testing and software quality as a Quality Engineer (QE).</p>
+    </div>
+</section>
+
+<!-- Tech Stack -->
+<section id="skills" class="py-20 sm:py-28">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="section-title">Tech Stack</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <div class="skill-card">
+                <h3 class="font-semibold text-slate-900 mb-3 flex items-center gap-2">
+                    <span class="w-8 h-8 rounded-lg bg-blue-100 flex items-center justify-center text-blue-600 text-sm">&#9881;</span>
+                    Languages
+                </h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="tag tag-lang">Python</span>
+                    <span class="tag tag-lang">TypeScript</span>
+                    <span class="tag tag-lang">Java</span>
+                    <span class="tag tag-lang">JavaScript</span>
+                    <span class="tag tag-lang">SQL</span>
+                </div>
             </div>
-            <div class="card bg-white p-6 border rounded-lg shadow-lg">
-                <h3 class="text-xl font-semibold text-[#0086e8]">What technologies do I master? 💻</h3>
-                <p>I specialize in software quality, test automation (Selenium, JMeter, Postman), and DevOps (GitLab CI/CD, Jenkins, Docker, Kubernetes). I have experience in Python, JavaScript, Java, C++, SQL, and PostgreSQL databases, as well as knowledge in AWS. 🚀</p>
+
+            <div class="skill-card">
+                <h3 class="font-semibold text-slate-900 mb-3 flex items-center gap-2">
+                    <span class="w-8 h-8 rounded-lg bg-green-100 flex items-center justify-center text-green-600 text-sm">&#10003;</span>
+                    Test Frameworks
+                </h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="tag">Selenium</span>
+                    <span class="tag">Playwright</span>
+                    <span class="tag">pytest</span>
+                    <span class="tag">Locust</span>
+                    <span class="tag">Robot Framework</span>
+                    <span class="tag">Cucumber/BDD</span>
+                    <span class="tag">JMeter</span>
+                    <span class="tag">Postman</span>
+                    <span class="tag">Burp Suite</span>
+                    <span class="tag">OWASP ZAP</span>
+                    <span class="tag">SonarQube</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3 class="font-semibold text-slate-900 mb-3 flex items-center gap-2">
+                    <span class="w-8 h-8 rounded-lg bg-purple-100 flex items-center justify-center text-purple-600 text-sm">&#9729;</span>
+                    Infrastructure
+                </h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="tag tag-infra">AWS (EC2, Lambda, KMS, VPC)</span>
+                    <span class="tag tag-infra">Kubernetes</span>
+                    <span class="tag tag-infra">Docker</span>
+                    <span class="tag tag-infra">Terraform</span>
+                    <span class="tag tag-infra">MariaDB</span>
+                    <span class="tag tag-infra">Redis</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3 class="font-semibold text-slate-900 mb-3 flex items-center gap-2">
+                    <span class="w-8 h-8 rounded-lg bg-red-100 flex items-center justify-center text-red-600 text-sm">&#8635;</span>
+                    CI/CD
+                </h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="tag tag-ci">GitLab CI</span>
+                    <span class="tag tag-ci">Jenkins</span>
+                    <span class="tag tag-ci">Parallel Sharding</span>
+                    <span class="tag tag-ci">Failure Classification</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3 class="font-semibold text-slate-900 mb-3 flex items-center gap-2">
+                    <span class="w-8 h-8 rounded-lg bg-cyan-100 flex items-center justify-center text-cyan-600 text-sm">&#9829;</span>
+                    Monitoring
+                </h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="tag tag-monitor">Prometheus/Grafana</span>
+                    <span class="tag tag-monitor">CloudWatch</span>
+                    <span class="tag tag-monitor">JVM Profiling</span>
+                    <span class="tag tag-monitor">Custom Alerting</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3 class="font-semibold text-slate-900 mb-3 flex items-center gap-2">
+                    <span class="w-8 h-8 rounded-lg bg-orange-100 flex items-center justify-center text-orange-600 text-sm">&#9889;</span>
+                    AI & Tooling
+                </h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="tag tag-ai">Kiro AI</span>
+                    <span class="tag tag-ai">Gemini Gems</span>
+                    <span class="tag tag-ai">Jira Rovo</span>
+                    <span class="tag tag-ai">MCP Integrations</span>
+                    <span class="tag tag-ai">Context Engineering</span>
+                    <span class="tag tag-ai">Agentic Workflows</span>
+                    <span class="tag">Jira (acli)</span>
+                    <span class="tag">GitLab (glab)</span>
+                    <span class="tag">Google Workspace CLI</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- AI Skills & Automations -->
+<section id="ai-skills" class="py-20 sm:py-28 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="section-title">AI Agent Skills</h2>
+        <p class="text-lg text-slate-600 text-center max-w-3xl mx-auto mb-12">
+            I've built <strong class="text-slate-900">several custom AI agent skills</strong> for QE workflows — from ticket verification and pipeline analysis to performance benchmarking. Each skill is a codified, deterministic workflow executed by an AI assistant. Combined with 40+ tool integrations and productivity automations, I maintain an ecosystem of <strong class="text-slate-900">50+ automated workflows</strong>.
+        </p>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <div class="skill-card border-l-4 border-l-blue-500">
+                <div class="text-xs font-mono text-blue-600 mb-1">QE-001</div>
+                <h3 class="font-semibold text-slate-900 mb-2">rpa-verification</h3>
+                <p class="text-sm text-slate-600">End-to-end ticket verification: fetches Jira context, proposes 3-layer test plans (verification, regression, exploratory), executes them, and writes V&V results back to Jira.</p>
+            </div>
+
+            <div class="skill-card border-l-4 border-l-blue-500">
+                <div class="text-xs font-mono text-blue-600 mb-1">QE-002</div>
+                <h3 class="font-semibold text-slate-900 mb-2">rpa-regression-testing</h3>
+                <p class="text-sm text-slate-600">Executes the full hotfix regression catalog via Playwright CLI — covering RT execution, subtasks, credentials, support files, logs, and Operations Console.</p>
+            </div>
+
+            <div class="skill-card border-l-4 border-l-blue-500">
+                <div class="text-xs font-mono text-blue-600 mb-1">QE-003</div>
+                <h3 class="font-semibold text-slate-900 mb-2">pipeline-failure-analysis</h3>
+                <p class="text-sm text-slate-600">Analyzes GitLab CI test failures across parallel shards, classifies by error type/component, and determines if failures relate to a ticket's code changes.</p>
+            </div>
+
+            <div class="skill-card border-l-4 border-l-blue-500">
+                <div class="text-xs font-mono text-blue-600 mb-1">QE-004</div>
+                <h3 class="font-semibold text-slate-900 mb-2">locust-prometheus-benchmark</h3>
+                <p class="text-sm text-slate-600">Runs <strong>Locust</strong> performance tests against RPA services, collects p50/p95/p99 from <strong>Prometheus/Grafana</strong>, compares against baselines, and flags regressions >10% with annotated charts.</p>
+            </div>
+
+            <div class="skill-card border-l-4 border-l-blue-500">
+                <div class="text-xs font-mono text-blue-600 mb-1">QE-005</div>
+                <h3 class="font-semibold text-slate-900 mb-2">weekly-quality-risk-report</h3>
+                <p class="text-sm text-slate-600">Monday risk reports: critical incidents, CVEs over/approaching SLA, quality gates status, delivered via Google Chat.</p>
+            </div>
+
+            <div class="skill-card border-l-4 border-l-blue-500">
+                <div class="text-xs font-mono text-blue-600 mb-1">QE-006</div>
+                <h3 class="font-semibold text-slate-900 mb-2">weekly-quality-summary</h3>
+                <p class="text-sm text-slate-600">Friday quality metrics: bugs created/resolved, backlog trends, week-over-week deltas, delivered to the team automatically.</p>
+            </div>
+
+        </div>
+
+        <div class="mt-8 card p-6">
+            <h3 class="font-semibold text-slate-900 mb-4">Also built: Productivity & Automation Layer</h3>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm text-slate-600">
+                <div>
+                    <span class="font-medium text-slate-800">Daily Workflows:</span>
+                    <p class="mt-1">standup-report, meeting-prep, email-to-task, weekly-digest, file-announce</p>
+                </div>
+                <div>
+                    <span class="font-medium text-slate-800">Recipes:</span>
+                    <p class="mt-1">doc-from-template, presentation-builder, draft-email, find-free-time, report-from-sheet, label-and-archive, save-attachments, recurring-event, share-and-notify</p>
+                </div>
+                <div>
+                    <span class="font-medium text-slate-800">Tool Integrations:</span>
+                    <p class="mt-1">Full Google Workspace CLI (Gmail, Calendar, Drive, Docs, Sheets, Slides, Chat, Meet, Forms, People, Tasks) + Jira CLI + Playwright CLI</p>
+                </div>
             </div>
         </div>
-    </section>
 
-    <!-- Contact -->
-    <section class="py-16 px-6 text-center">
-        <h2 class="text-3xl font-semibold text-[#0086e8] mb-8">Get in Touch! 📩</h2>
-        <a href="mailto:alfredo.bazo89@gmail.com" class="bg-[#ff0f0e] text-white py-2 px-6 rounded-lg shadow-lg hover:bg-[#21abfb] transition duration-300">Send me an email 📧</a>
-        <p class="mt-4 text-gray-700">Or write to me directly at <a href="mailto:alfredo.bazo89@gmail.com" class="text-[#0086e8]">alfredo.bazo89@gmail.com</a></p>
-    </section>    
+        <div class="mt-6 card p-6">
+            <h3 class="font-semibold text-slate-900 mb-4">Standards Authored</h3>
+            <div class="grid sm:grid-cols-3 gap-4 text-sm">
+                <div class="p-4 bg-slate-50 rounded-lg">
+                    <div class="font-medium text-slate-800 mb-1">QE Best Practices</div>
+                    <p class="text-slate-600">AAA pattern, explicit wait strategies (zero hard sleeps), test tagging, flaky test handling, CI/CD integration, performance baselines</p>
+                </div>
+                <div class="p-4 bg-slate-50 rounded-lg">
+                    <div class="font-medium text-slate-800 mb-1">AI Excellence Standards</div>
+                    <p class="text-slate-600">Context engineering, code generation quality gates, MCP-first workflow, mandatory post-change verification</p>
+                </div>
+                <div class="p-4 bg-slate-50 rounded-lg">
+                    <div class="font-medium text-slate-800 mb-1">Google Workspace Priority</div>
+                    <p class="text-slate-600">CLI-first architecture reducing token cost and increasing determinism for all Google integrations</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <footer class="text-center py-6 bg-[#0086e8] text-white">
-        <p>&copy; 2025 Alfredo. All rights reserved. 🌐</p>
-    </footer>
+<!-- Metrics -->
+<section id="metrics" class="py-20 sm:py-28">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="section-title">Metrics I Track &amp; Report</h2>
+        <p class="text-lg text-slate-600 text-center max-w-2xl mx-auto mb-12">
+            Data-driven quality means every decision is backed by concrete numbers. These are the metrics I use to measure and improve quality across the platform.
+        </p>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+            <div class="card p-6 text-center">
+                <div class="metric-value mb-2">Bug Escape</div>
+                <div class="text-3xl font-bold text-slate-900 mb-1">&lt; 1%</div>
+                <p class="text-sm text-slate-500">Customer-found vs internally-found bug ratio</p>
+            </div>
+
+            <div class="card p-6 text-center">
+                <div class="metric-value mb-2">Regression</div>
+                <div class="text-3xl font-bold text-slate-900 mb-1">&lt; 2%</div>
+                <p class="text-sm text-slate-500">Regression bugs vs total new bugs</p>
+            </div>
+
+            <div class="card p-6 text-center">
+                <div class="metric-value mb-2">CVE SLA</div>
+                <div class="text-3xl font-bold text-slate-900 mb-1">98%</div>
+                <p class="text-sm text-slate-500">CVE SLA compliance rate</p>
+            </div>
+
+            <div class="card p-6 text-center">
+                <div class="metric-value mb-2">Error Rate</div>
+                <div class="text-3xl font-bold text-slate-900 mb-1">&lt; 1%</div>
+                <p class="text-sm text-slate-500">Service error rate threshold</p>
+            </div>
+
+        </div>
+
+        <div class="mt-8 card p-6 sm:p-8">
+            <h3 class="font-semibold text-slate-900 mb-4">Additional Metrics Tracked</h3>
+            <div class="grid sm:grid-cols-2 gap-4 text-sm text-slate-600">
+                <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+                    <span><strong>Backlog health</strong> &mdash; Priority distribution, age buckets (30d / 90d)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+                    <span><strong>Pipeline green rate</strong> &mdash; MRs with failing pipelines flagged weekly</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+                    <span><strong>Response times</strong> &mdash; p50, p95, p99 for RPA operations</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+                    <span><strong>Automation coverage</strong> &mdash; % of regression suite automated</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section id="testimonials" class="py-20 sm:py-28">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="section-title">What colleagues say</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+
+            <div class="card p-6 sm:p-8">
+                <div class="flex items-start gap-3 mb-4">
+                    <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold shrink-0">A</div>
+                    <div>
+                        <p class="text-slate-900 font-semibold">RPA Squad Lead</p>
+                        <p class="text-slate-500 text-sm">Appian</p>
+                    </div>
+                </div>
+                <p class="text-slate-600 italic leading-relaxed">
+                    "Highly committed team mate. One of the latest situations where he excelled this commitment was performance, really fast and being flexible with his time, the necessary tests for us to be able to release the fix that solved a blocker RRT incident from Coast Capital. This behavior, attitude and willingness to help and learn, has made him and our squad more autonomous and agile."
+                </p>
+            </div>
+
+            <div class="card p-6 sm:p-8">
+                <div class="flex items-start gap-3 mb-4">
+                    <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600 font-bold shrink-0">P</div>
+                    <div>
+                        <p class="text-slate-900 font-semibold">Product Manager</p>
+                        <p class="text-slate-500 text-sm">Appian</p>
+                    </div>
+                </div>
+                <p class="text-slate-600 italic leading-relaxed">
+                    "Alfredo has demonstrated that he is willing to face and overcome obstacles, even if he does not know anything about them initially. One of the latest problems affected the creation of users in Maverick and Cloud sites. Despite asking for my collaboration, he started contacting other teams, trying to understand the code and configurations in other projects, and performing changes in them to try resolving the issue."
+                </p>
+            </div>
+
+            <div class="card p-6 sm:p-8">
+                <div class="flex items-start gap-3 mb-4">
+                    <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 font-bold shrink-0">D</div>
+                    <div>
+                        <p class="text-slate-900 font-semibold">Developer</p>
+                        <p class="text-slate-500 text-sm">Appian</p>
+                    </div>
+                </div>
+                <p class="text-slate-600 italic leading-relaxed">
+                    "Really good self-time management. It's like he's always able to meet the deadline even when the amount of work to do is huge and the squad is delayed so he has less time. He is always willing to help other team members, even when he is really busy. He is always open to new suggestions and ideas. He takes time to understand the scope of the features so that he could pass better tests."
+                </p>
+            </div>
+
+            <div class="card p-6 sm:p-8">
+                <div class="flex items-start gap-3 mb-4">
+                    <div class="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 font-bold shrink-0">M</div>
+                    <div>
+                        <p class="text-slate-900 font-semibold">QE Manager</p>
+                        <p class="text-slate-500 text-sm">Appian</p>
+                    </div>
+                </div>
+                <p class="text-slate-600 italic leading-relaxed">
+                    "Demonstrates strong contextual and technical knowledge of the RPA product, consistently suggesting effective DPAs to resolve bugs and enhance system reliability. Independently manages RPA releases with diligence and accountability. Collaborated effectively with GQL and fellow QEs on the Components guidance document, offering valuable insights and improving technical clarity."
+                </p>
+            </div>
+
+            <div class="card p-6 sm:p-8">
+                <div class="flex items-start gap-3 mb-4">
+                    <div class="w-10 h-10 rounded-full bg-cyan-100 flex items-center justify-center text-cyan-600 font-bold shrink-0">E</div>
+                    <div>
+                        <p class="text-slate-900 font-semibold">Engineering Manager</p>
+                        <p class="text-slate-500 text-sm">Appian</p>
+                    </div>
+                </div>
+                <p class="text-slate-600 italic leading-relaxed">
+                    "Alfredo continues to demonstrate excellent self-management and organisational skills. He has been operating as the sole QE of the RPA team for some time now and as far as we know from his duties, he has been able to keep the needs of the team covered. He continues to communicate every problem he encounters with the rest of the team in a timely manner. He also has the ability to anticipate problems by asking for help or adapting the timing of RPA releases whenever necessary."
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Certifications -->
+<section id="certifications" class="py-20 sm:py-28 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="section-title">Certifications</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+            <div class="card p-6 text-center">
+                <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mx-auto mb-3">
+                    <span class="text-blue-600 text-xl font-bold">ISTQB</span>
+                </div>
+                <h3 class="font-semibold text-slate-900">ISTQB Foundation Level</h3>
+                <p class="text-sm text-slate-500 mt-1">iSQI GmbH &mdash; 2017</p>
+                <p class="text-xs text-slate-400 mt-1">ID: 17-CTFL-116474-03</p>
+            </div>
+
+            <div class="card p-6 text-center">
+                <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-3">
+                    <span class="text-green-600 text-xl font-bold">SM</span>
+                </div>
+                <h3 class="font-semibold text-slate-900">Scrum Master</h3>
+                <p class="text-sm text-slate-500 mt-1">Scrum Manager &mdash; 2019</p>
+                <p class="text-xs text-slate-400 mt-1">ID: 25832</p>
+            </div>
+
+            <div class="card p-6 text-center">
+                <div class="w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center mx-auto mb-3">
+                    <span class="text-orange-600 text-xl font-bold">C1</span>
+                </div>
+                <h3 class="font-semibold text-slate-900">English C1 (CAE)</h3>
+                <p class="text-sm text-slate-500 mt-1">Cambridge University &mdash; 2017</p>
+            </div>
+
+            <div class="card p-6 text-center">
+                <div class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center mx-auto mb-3">
+                    <span class="text-purple-600 text-xl font-bold">MH</span>
+                </div>
+                <h3 class="font-semibold text-slate-900">Honors Degree</h3>
+                <p class="text-sm text-slate-500 mt-1">Universidad de Sevilla &mdash; 2015</p>
+                <p class="text-xs text-slate-400 mt-1">Airbus R&D Project</p>
+            </div>
+
+        </div>
+
+        <div class="mt-8 card p-6">
+            <h3 class="font-semibold text-slate-900 mb-3">Additional Training</h3>
+            <div class="flex flex-wrap gap-2">
+                <span class="tag tag-ai">Agile Tester Foundation Level</span>
+                <span class="tag tag-ai">Selenium con Python</span>
+                <span class="tag tag-infra">Big Data</span>
+                <span class="tag tag-lang">Android Development</span>
+                <span class="tag tag-monitor">Performance Testing Foundations</span>
+                <span class="tag tag-ci">Unix Essential Training</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Education -->
+<section class="py-20 sm:py-28">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="section-title">Education</h2>
+        <div class="card p-8 sm:p-10">
+            <div class="flex flex-wrap items-start justify-between gap-2 mb-2">
+                <div>
+                    <h3 class="text-xl font-bold text-slate-900">Telecommunications Engineering</h3>
+                    <p class="text-blue-600 font-medium">Universidad de Sevilla</p>
+                </div>
+                <span class="text-sm text-slate-500 font-mono">2007 &ndash; 2013</span>
+            </div>
+            <p class="text-slate-600">
+                Solid technical foundation in networks, communication systems, and software development. Final thesis on a vision system for a flexible riveting machine (Airbus R&D project) earned <strong>Honors Degree</strong>. Two years in the Robotics, Vision & Control Group.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section class="py-20 sm:py-28 gradient-hero">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Let's talk</h2>
+        <p class="text-lg text-slate-400 mb-8 max-w-xl mx-auto">
+            I'm currently open to Senior QE opportunities. If you're looking for someone who combines deep quality engineering with AI-augmented workflows, let's connect.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+            <a href="mailto:alfredo.bazo89@gmail.com"
+               class="gradient-accent text-white font-semibold px-8 py-3.5 rounded-lg hover:opacity-90 transition shadow-lg shadow-blue-500/25">
+                alfredo.bazo89@gmail.com
+            </a>
+            <a href="https://www.linkedin.com/in/alfredobazo/" target="_blank"
+               class="border border-slate-600 text-slate-300 font-semibold px-8 py-3.5 rounded-lg hover:bg-slate-800 transition">
+                LinkedIn
+            </a>
+            <a href="cv-alfredo-bazo.pdf" target="_blank"
+               class="border border-slate-600 text-slate-300 font-semibold px-8 py-3.5 rounded-lg hover:bg-slate-800 transition">
+                Download CV (PDF)
+            </a>
+            <a href="https://gitlab.com/AlfredoBazo" target="_blank"
+               class="border border-slate-600 text-slate-300 font-semibold px-8 py-3.5 rounded-lg hover:bg-slate-800 transition">
+                GitLab
+            </a>
+        </div>
+        <p class="text-slate-500 text-sm mt-8">&copy; 2025 Alfredo Bazo</p>
+    </div>
+</section>
+
+<script>
+    document.getElementById('menu-btn')?.addEventListener('click', () => {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('hidden');
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const id = this.getAttribute('href');
+            document.querySelector(id)?.scrollIntoView({ behavior: 'smooth' });
+            document.getElementById('mobile-menu')?.classList.add('hidden');
+        });
+    });
+</script>
 
 </body>
 </html>
